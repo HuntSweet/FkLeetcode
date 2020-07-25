@@ -7,20 +7,20 @@ package linkedList
 
  //双指针
 func reverseList3(head *ListNode) *ListNode {
-	if head == nil || head.Next == nil{
-		return head
+
+	var pre *ListNode
+	cur := head
+
+	for cur != nil{
+		next := cur.Next
+
+		cur.Next = pre
+		pre = cur
+		cur = next
 	}
 
-	n := head
-	var c *ListNode
-	c = nil
-	for n != nil{
-		head = head.Next
-		n.Next = c
-		c = n
-		n = head
-	}
-	return c
+	return pre
+
 }
  //递归1，超级低效
 func reverseList(head *ListNode) *ListNode {
