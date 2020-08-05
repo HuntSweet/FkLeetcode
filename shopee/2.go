@@ -23,6 +23,6 @@ func compare(x,y int) int {
 }
 
 func main()  {
-	var a,b int
+
 
 }
