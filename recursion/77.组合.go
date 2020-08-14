@@ -15,7 +15,7 @@ func combine(n int, k int) [][]int {
 		}
 
 		//[i,n]分别区间两端分别剪枝
-		for i:=index;i<=n;i++{
+		for i:=index;i<=n-(k-len(re))+1;i++{
 			f(i+1,append(re,i))
 		}
 	}
